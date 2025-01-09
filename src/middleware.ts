@@ -1,39 +1,3 @@
-// import { clerkMiddleware, createRouteMatcher } from '@clerk/nextjs/server';
-// import { NextResponse } from 'next/server';
-
-// const isPublicRoute = createRouteMatcher(['/site', '/api/uploadthing', '/agency/sign-in', '/agency/sign-up']);
-
-// export default clerkMiddleware(async (auth, request) => {
-//   // Check if the route is public
-//   if (!isPublicRoute(request)) {
-//     try {
-//       // Protect the route using Clerk's auth protection
-//       await auth.protect(); // ( isme cookies or session ka access milta h isko jisse isko pta chlta h ki user authenticated h ya nhi h )
-
-//     } catch (error) {
-//       console.log('Clerk Middleware Error:', error);  
-//       // Redirect unauthenticated users to your custom sign-in page
-//       const signInUrl = new URL('/agency/sign-in', request.url);
-//       return NextResponse.redirect(signInUrl);
-//     }
-//   }
-
-//   // Return the response for public or authenticated routes
-//   return NextResponse.next();
-// });
-
-// export const config = {
-//   matcher: [
-//     // Exclude Next.js internal routes and static files
-//     '/((?!_next|[^?]*\\.(?:html?|css|js(?!on)|jpe?g|webp|png|gif|svg|ttf|woff2?|ico|csv|docx?|xlsx?|zip|webmanifest)).*)',
-//     // Always include API routes for Clerk middleware
-//     '/(api|trpc)(.*)',
-//     '/agency/sign-in',
-//     '/agency/sign-up'
-//   ],
-// };
-
-
 import { clerkMiddleware, createRouteMatcher } from '@clerk/nextjs/server';
 import { NextResponse } from 'next/server';
 
