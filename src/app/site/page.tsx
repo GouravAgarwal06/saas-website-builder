@@ -68,7 +68,7 @@ export default function Home() {
                   {card.price}
                 </span>
                 <span className="text-muted-foreground">
-                  <span>/{card.duration}</span>
+                  <span>{card.duration ? `/${card.duration}` : ''}</span>
                 </span>
               </CardContent>
               <CardFooter className="flex flex-col items-start gap-4">

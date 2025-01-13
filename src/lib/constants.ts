@@ -6,7 +6,7 @@ export const pricingCards = [
     price: 'Free',
     duration: '',
     highlight: 'Key features',
-    features: ['3 Sub accounts', '2 Team members', 'Unlimited pipelines'],
+    features: ['3 Sub accounts', '2 Team members'],
     priceId: '',
   },
   {

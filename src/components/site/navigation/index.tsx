@@ -10,6 +10,7 @@ type Props = {
 }
 
 const Navigation = ( { user }: Props) => {
+    console.log("user in components: ",user)
   return (
     <div className='fixed top-0 right-0 left-0 p-4 flex items-center justify-between z-10'>
         <aside className='flex items-center gap-2'>
@@ -33,7 +34,7 @@ const Navigation = ( { user }: Props) => {
 
         <aside className="flex gap-2 items-center">
             <Link
-                href={'/'}
+                href={'/agency'}
                 className="bg-primary text-white p-2 px-4 rounded-md hover:bg-primary/80"
             >
                 Login
